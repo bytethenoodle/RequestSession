@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B86BC8D5838CE1115DF5F4A3C12AE96B2A85F0D9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3A37CCCB8009D2857E722C0BFF570B1C7EB8A4FB" : 9223372036854775807,
+    "DE2272125864C1638D726DA1B9A9EF60732C48A8" : 9223372036854775807,
+    "B86BC8D5838CE1115DF5F4A3C12AE96B2A85F0D9" : 9223372036854775807,
+    "76A51B5AA54C2B42125986C7843A78515A860370" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "72F7C814-F451-4511-8F77-4BC7E2B106E6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3A37CCCB8009D2857E722C0BFF570B1C7EB8A4FB" : "RequestSession\/.build\/checkouts\/Inquiline--5421921148665507002\/",
+    "DE2272125864C1638D726DA1B9A9EF60732C48A8" : "RequestSession\/.build\/checkouts\/Requests-8043165216409049653\/",
+    "B86BC8D5838CE1115DF5F4A3C12AE96B2A85F0D9" : "RequestSession\/",
+    "76A51B5AA54C2B42125986C7843A78515A860370" : "RequestSession\/.build\/checkouts\/Nest.git--2185935898851902116\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RequestSession",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RequestSession.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/noodlebytes\/Documents\/Git\/Remote\/Github\/IBM\/RequestSession\/.build\/repositories\/Inquiline--5421921148665507002",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A37CCCB8009D2857E722C0BFF570B1C7EB8A4FB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/noodlebytes\/Documents\/Git\/Remote\/Github\/IBM\/RequestSession\/.build\/repositories\/Nest.git--2185935898851902116",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76A51B5AA54C2B42125986C7843A78515A860370"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:bytethenoodle\/RequestSession.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B86BC8D5838CE1115DF5F4A3C12AE96B2A85F0D9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/noodlebytes\/Documents\/Git\/Remote\/Github\/IBM\/RequestSession\/.build\/repositories\/Requests-8043165216409049653",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DE2272125864C1638D726DA1B9A9EF60732C48A8"
+    }
+  ]
+}

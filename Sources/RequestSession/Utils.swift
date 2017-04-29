@@ -18,8 +18,11 @@ extension String {
 #else
 import Dispatch
 
-func async(block: (Void) -> Void) {
-  dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), block)
+func async(block: @escaping (Void) -> Void) {
+    
+    DispatchQueue.global(qos: .background).async {
+        block()
+    }    
 }
 #endif
 

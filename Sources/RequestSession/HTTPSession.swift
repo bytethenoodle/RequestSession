@@ -10,7 +10,7 @@ extension PayloadType {
       guard let nextBytes = self.next() else { break }
       bytes += nextBytes
     } while true
-    return String(bytes)
+    return String(describing: bytes)
   }
 }
 
@@ -24,12 +24,12 @@ public class HTTPSessionConfiguration {
 
 public typealias HTTPCompletionFunc = ((NSData?, HTTPURLResponse?, NSError?) -> Void)
 
-public class HTTPSessionDataTask {
+open class HTTPSessionDataTask {
   let completion: HTTPCompletionFunc
   let configuration: HTTPSessionConfiguration
   let URL: NSURL
 
-  private init(configuration: HTTPSessionConfiguration, URL: NSURL, completion: HTTPCompletionFunc) {
+  public init(configuration: HTTPSessionConfiguration, URL: NSURL, completion: @escaping HTTPCompletionFunc) {
     self.completion = completion
     self.configuration = configuration
     self.URL = URL
@@ -59,9 +59,9 @@ public class HTTPSessionDataTask {
     var response: Response?
 
     do {
-      response = try get(urlString, headers: headers)
+      response = try get(url: urlString!, headers: headers)
     } catch {
-      completion(nil, nil, makeError(String(error)))
+      completion(nil, nil, makeError(message: String(describing: error)))
       return
     }
 
@@ -69,13 +69,13 @@ public class HTTPSessionDataTask {
     if let body = body?.asString() {
       let urlResponse = HTTPURLResponse(URL: URL, statusCode: 200,
         HTTPVersion: "1.1", headerFields: nil)
-      if let body = NSString(string: body).data(usingEncoding: NSUTF8StringEncoding) {
-        completion(body, urlResponse, nil)
+      if let body = NSString(string: body).data(using: String.Encoding.utf8.rawValue) {
+        completion(body as NSData, urlResponse, nil)
       } else {
-        completion(nil, urlResponse, makeError("NSData conversion failed: \(body)"))
+        completion(nil, urlResponse, makeError(message: "NSData conversion failed: \(body)"))
       }
     } else {
-      completion(nil, nil, makeError("Empty HTTP response body."))
+      completion(nil, nil, makeError(message: "Empty HTTP response body."))
     }
   }
 
@@ -91,7 +91,7 @@ public class HTTPSession {
     self.configuration = configuration
   }
 
-  public func dataTaskWithURL(url: NSURL, completion: HTTPCompletionFunc) -> HTTPSessionDataTask {
+  public func dataTaskWithURL(url: NSURL, completion: @escaping HTTPCompletionFunc) -> HTTPSessionDataTask {
     return HTTPSessionDataTask(configuration: configuration, URL: url, completion: completion)
   }
 }
