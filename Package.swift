@@ -3,6 +3,6 @@ import PackageDescription
 let package = Package(
     name: "RequestSession",
     dependencies: [
-      .Package(url: "https://github.com/neonichu/Requests", "0.1.4")
+      .Package(url: "https://github.com/bytethenoodle/Requests", "0.1.4")
     ]
 )
